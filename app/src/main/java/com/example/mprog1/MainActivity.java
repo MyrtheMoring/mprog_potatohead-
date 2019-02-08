@@ -9,13 +9,13 @@ import android.widget.ImageView;
 
 public class MainActivity extends AppCompatActivity {
 
+    public static int[] ids = {R.id.arms, R.id.hat, R.id.mustache, R.id.shoes, R.id.mouth, R.id.nose, R.id.glasses, R.id.eyes, R.id.eyebrows};
+    public static String[] ids_strings = {"arms", "hat", "mustache", "shoes", "mouth", "nose", "glasses", "eyes", "eyebrows"};
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        int[] ids = {R.id.arms, R.id.hat, R.id.mustache, R.id.shoes, R.id.mouth, R.id.nose, R.id.glasses, R.id.eyes, R.id.eyebrows};
-        String[] ids_strings = {"arms", "hat", "mustache", "shoes", "mouth", "nose", "glasses", "eyes", "eyebrows"};
 
         if (savedInstanceState != null){
             for (int i = 0; i < 9; i++){
@@ -30,9 +30,6 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
-
-        int[] ids = {R.id.arms, R.id.hat, R.id.mustache, R.id.shoes, R.id.mouth, R.id.nose, R.id.glasses, R.id.eyes, R.id.eyebrows};
-        String[] ids_strings = {"arms", "hat", "mustache", "shoes", "mouth", "nose", "glasses", "eyes", "eyebrows"};
 
         for (int i = 0; i < 9; i++){
             ImageView image = (ImageView) findViewById(ids[i]);
@@ -51,7 +48,6 @@ public class MainActivity extends AppCompatActivity {
         ImageView image = (ImageView) findViewById(id);
 
         if (c) {
-            System.out.println(image);
             image.setVisibility(View.VISIBLE);
         } else image.setVisibility(View.INVISIBLE);
     }

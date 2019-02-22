@@ -14,6 +14,8 @@ The app displays a *Mr. Potato Head* toy on the screen. This toy has several acc
 - hat
 - shoes
 
+The goal of this exercise to store the clicked accessories and body parts while rotating the app. This is working correctly as can be seen in the screenshots below. 
+
 1. The potatohead without accessories:
 ![alt text](https://github.com/MyrtheMoring/mprog_potatohead-/blob/master/overview0.png "Overview without accessories")
 

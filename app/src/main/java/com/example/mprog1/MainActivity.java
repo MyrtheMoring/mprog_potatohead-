@@ -12,6 +12,9 @@ public class MainActivity extends AppCompatActivity {
     public static int[] ids = {R.id.arms, R.id.hat, R.id.mustache, R.id.shoes, R.id.mouth, R.id.nose, R.id.glasses, R.id.eyes, R.id.eyebrows};
     public static String[] ids_strings = {"arms", "hat", "mustache", "shoes", "mouth", "nose", "glasses", "eyes", "eyebrows"};
 
+    /* This function onCreate will be called when the activity is loaded.
+    When there is not a previously saved instance, it will set the visibility values to invisible.
+    Otherwise, when there is a saved instance, it will restore these visibility values. */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    /* Function onSaveInstanceState that saves the Bundle in order to restore the visibility values.*/
     @Override
     public void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
@@ -38,6 +42,9 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    /* This function will be called in the case a checkbox is clicked. First it will find the
+    ImageView corresponding to this checkbox. Then it will set the visibility value to the opposite
+    value: visible->invisible and invisible->visible. */
     public void checkClicked(View v) {
         Log.d("potato", "checkClicked");
 
